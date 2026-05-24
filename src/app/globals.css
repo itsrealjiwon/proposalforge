@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-navy: #0A1628;
+  --color-navy-light: #142240;
+  --color-navy-mid: #1B2D4A;
+  --color-gold: #D4A843;
+  --color-gold-light: #F0D78C;
+  --color-gold-dark: #B8922E;
+  --color-ivory: #FFFDF5;
+  --color-slate: #94A3B8;
+  --font-display: Georgia, Cambria, serif;
+  --font-body: system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0A1628;
+  color: #FFFDF5;
+}
+
+/* Gold decorative line */
+.gold-rule {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4A843, transparent);
+}
+
+/* Wizard step connector */
+.step-connector {
+  position: relative;
+}
+.step-connector::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 100%;
+  height: 2px;
+  background: #1B2D4A;
+}
+.step-connector.active::after {
+  background: linear-gradient(90deg, #D4A843, #1B2D4A);
+}
+
+/* Proposal paper effect */
+.proposal-paper {
+  background: #FFFDF5;
+  color: #0A1628;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+.proposal-paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #D4A843, #B8922E, #D4A843);
+}
+
+/* Subtle grid bg */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(212, 168, 67, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 168, 67, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Typewriter cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: "▌";
+  animation: blink 1s step-end infinite;
+  color: #D4A843;
 }
