@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📋 ProposalForge
 
-## Getting Started
+> Turn a project idea into a polished business proposal. ProposalForge generates structured proposals with executive summaries, timelines, budgets, and deliverables — all powered by AI.
 
-First, run the development server:
+![ProposalForge](proof/commit-log.png)
+
+---
+
+## How it works
+
+Describe your project in a few sentences. ProposalForge generates a complete proposal document including:
+
+- **Executive Summary** — High-level project overview
+- **Problem Statement** — What challenge are we solving?
+- **Proposed Solution** — Technical approach and architecture
+- **Timeline** — Phase-by-phase delivery schedule
+- **Budget Estimate** — Cost breakdown by phase
+- **Deliverables** — Concrete outputs and milestones
+- **Risk Assessment** — Potential challenges and mitigations
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# → http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```env
+MIMO_API_URL=http://localhost:19911/v1/chat/completions
+MIMO_API_KEY=your_key_here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- **Framework:** Next.js 16 with App Router
+- **Styling:** Tailwind CSS 4
+- **Language:** TypeScript
+- **AI:** MiMo v2.5 Pro by Xiaomi
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+└── app/
+    ├── api/generate/route.ts    # Proposal generation API
+    ├── page.tsx                 # Form + preview layout
+    ├── globals.css              # Slate/blue professional theme
+    └── layout.tsx               # Root layout
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design Language
 
-## Deploy on Vercel
+Professional and clean. Slate grays with blue accent (#3b82f6). Card-based layout with subtle borders. Designed to feel like a SaaS productivity tool, not a demo project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## MiMo v2.5 Pro
+
+ProposalForge is powered by **[MiMo v2.5 Pro](https://huggingface.co/XiaomiMiMo)**, Xiaomi's reasoning-optimized language model. MiMo excels at structured long-form generation, making it ideal for business documents.
+
+> *"Crafted with MiMo v2.5 Pro"*
+
+---
+
+**License:** MIT
