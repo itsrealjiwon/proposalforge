@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background: #0d0d0d; display:flex; justify-content:center; align-items:center; min-height:100vh; padding:40px; font-family: 'SF Mono','Fira Code','JetBrains Mono',monospace; }
+.terminal { width: 900px; background: #1a1b26; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.5); }
+.titlebar { background: #16161e; padding: 14px 16px; display: flex; align-items: center; gap: 8px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot-red { background: #f7768e; }
+.dot-yellow { background: #e0af68; }
+.dot-green { background: #9ece6a; }
+.title { color: #565f89; font-size: 13px; margin-left: 12px; }
+.body { padding: 24px; }
+.project-badge { color: #D4A843; font-size: 14px; margin-bottom: 16px; padding: 8px 14px; background: rgba(212,168,67,0.08); border-radius: 8px; border-left: 3px solid #D4A843; }
+.prompt-line { margin-bottom: 4px; }
+.prompt-user { color: #9ece6a; }
+.prompt-at { color: #565f89; }
+.prompt-dir { color: #7aa2f7; }
+.prompt-git { color: #0A1628; margin-left: 6px; }
+.prompt-symbol { color: #D4A843; margin-left: 6px; }
+.cmd { color: #c0caf5; margin-bottom: 20px; font-size: 15px; }
+.cmd span { color: #bb9af7; }
+.commit-block { border-left: 3px solid #D4A843; padding-left: 16px; margin-bottom: 20px; }
+.hash { color: #ff9e64; font-weight: bold; }
+.msg { color: #c0caf5; font-size: 16px; font-weight: 600; margin: 4px 0; }
+.meta { color: #565f89; font-size: 13px; }
+.file-list { margin-top: 12px; }
+.file-row { display: flex; align-items: center; gap: 10px; padding: 4px 0; }
+.badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
+.fname { color: #7dcfff; font-size: 13px; }
+.footer { color: #565f89; font-size: 12px; margin-top: 20px; padding-top: 12px; border-top: 1px solid #24283b; }
+</style></head><body>
+<div class="terminal">
+  <div class="titlebar">
+    <div class="dot dot-red"></div><div class="dot dot-yellow"></div><div class="dot dot-green"></div>
+    <div class="title">root@dev: ~/proposalforge</div>
+  </div>
+  <div class="body">
+    <div class="project-badge">📁 Proposalforge — Project #16 of 20</div>
+    <div class="prompt-line">
+      <span class="prompt-user">root</span><span class="prompt-at">@</span>
+      <span class="prompt-dir">~/proposalforge</span><span class="prompt-git">(master)</span>
+      <span class="prompt-symbol">❯</span>
+    </div>
+    <div class="cmd"><span>git</span> log --oneline --stat -1</div>
+    <div class="commit-block">
+      <div><span class="hash">5883c9e</span></div>
+      <div class="msg">ProposalForge: AI business proposal generator with wizard workflow</div>
+      <div class="meta">2026-05-24 07:16:26</div>
+      <div class="file-list"><div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">src/app/api/generate/route.ts</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(255,158,100,0.15);color:#ff9e64">MOD</span>
+  <span class="fname">src/app/globals.css</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(255,158,100,0.15);color:#ff9e64">MOD</span>
+  <span class="fname">src/app/layout.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(255,158,100,0.15);color:#ff9e64">MOD</span>
+  <span class="fname">src/app/page.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">src/components/Step1ClientInfo.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">src/components/Step2ProjectScope.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">src/components/Step3Generating.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">src/components/Step4Preview.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">src/components/WizardSteps.tsx</span>
+</div>
+<div class="file-row">
+  <span class="badge" style="background:rgba(158,206,106,0.15);color:#9ece6a">NEW</span>
+  <span class="fname">tailwind.config.ts</span>
+</div>
+</div>
+    </div>
+    <div class="footer">miMo 100T · 10 files changed · built with MiMo v2.5 Pro</div>
+  </div>
+</div>
+</body></html>
